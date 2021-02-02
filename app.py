@@ -18,7 +18,8 @@ def main():
 
 @st.cache
 def load_data():
-    df = data.cars()
+    url = "https://raw.githubusercontent.com/CarlSaganPhD/streamlittest/main/networkproejctions.csv"
+    df = pd.read_csv(url)
     return df
 
 def visualize_data(df, x_axis, y_axis):
